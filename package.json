@@ -1,0 +1,26 @@
+{
+    "name": "testing-build",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sanwal-truefoundry/testing-build.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sanwal-truefoundry/testing-build/issues"
+    },
+    "homepage": "https://github.com/sanwal-truefoundry/testing-build#readme",
+    "dependencies": {
+        "@actions/core": "^1.9.0",
+        "dotenv": "^16.0.1",
+        "fs": "^0.0.1-security",
+        "js-yaml": "^4.1.0"
+    }
+}
