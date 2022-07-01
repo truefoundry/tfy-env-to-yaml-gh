@@ -1,5 +1,5 @@
-name: 'Build Servicefoundry-Server'
-description: 'Build server'
+name: 'tfy-env-to-yaml-gh'
+description: 'Github action to update yaml file'
 inputs:
   envPath:
     description: 'Source directory from another repo'
