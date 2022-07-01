@@ -1,5 +1,5 @@
 {
-    "name": "testing-build",
+    "name": "tfy-env-to-yaml-gh",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -8,15 +8,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sanwal-truefoundry/testing-build.git"
+        "url": "git+https://github.com/truefoundry/tfy-env-to-yaml-gh.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/sanwal-truefoundry/testing-build/issues"
+        "url": "https://github.com/truefoundry/tfy-env-to-yaml-gh/issues"
     },
-    "homepage": "https://github.com/sanwal-truefoundry/testing-build#readme",
+    "homepage": "https://github.com/truefoundry/tfy-env-to-yaml-gh#readme",
     "dependencies": {
         "@actions/core": "^1.9.0",
         "dotenv": "^16.0.1",
