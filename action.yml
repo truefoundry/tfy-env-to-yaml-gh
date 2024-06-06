@@ -10,6 +10,9 @@ inputs:
   imageTag:
     description: 'for changing value'
     required: true
+  subPath:
+    description: 'sub path to patch at'
+    required: false
 
 runs:
   using: 'node16'
