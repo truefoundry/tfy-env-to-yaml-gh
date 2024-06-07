@@ -4,15 +4,10 @@ import yaml from 'yaml';
 import core from '@actions/core';
 
 function main() {
-  // const envPath = core.getInput('envPath');
-  // const outputFile = core.getInput('outputFile');
-  // const imageTag = core.getInput('imageTag');
-  // const subPath = core.getInput('subPath', { required: false });
-
-  const envPath = '.env.default';
-  const outputFile = 'values.yaml';
-  const imageTag = '<test-tag>';
-  const subPath = 'sfyManifestService';
+  const envPath = core.getInput('envPath');
+  const outputFile = core.getInput('outputFile');
+  const imageTag = core.getInput('imageTag');
+  const subPath = core.getInput('subPath', { required: false });
 
   const { parsed } = dotenv.config({ path: envPath });
   const data = fs.readFileSync(outputFile, 'utf8');
