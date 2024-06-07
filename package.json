@@ -18,7 +18,7 @@
     },
     "homepage": "https://github.com/truefoundry/tfy-env-to-yaml-gh#readme",
     "dependencies": {
-        "@actions/core": "^1.9.0",
+        "@actions/core": "^1.9.1",
         "dotenv": "^16.0.1",
         "fs": "^0.0.1-security",
         "yaml": "^2.4.3"
