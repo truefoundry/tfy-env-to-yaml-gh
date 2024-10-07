@@ -25,7 +25,6 @@ function main() {
     }
     currentObj.get(subPathKeys[subPathKeys.length - 1]).set('env', parsed);
     currentObj.get(subPathKeys[subPathKeys.length - 1]).get('image').set('tag', imageTag);
-    // console.log(currentObj.get(subPathKeys[subPathKeys.length - 1]).get('image').get('tag'));
   } else {
     doc.set('env', parsed);
     doc.set('image.tag', imageTag);
