@@ -24,10 +24,10 @@ function main() {
       currentObj = currentObj.get(key);
     }
     currentObj.get(subPathKeys[subPathKeys.length - 1]).set('env', parsed);
-    currentObj.get(subPathKeys[subPathKeys.length - 1]).set('imageTag', imageTag);
+    currentObj.get(subPathKeys[subPathKeys.length - 1]).set('image.tag', imageTag);
   } else {
     doc.set('env', parsed);
-    doc.set('imageTag', imageTag);
+    doc.set('image.tag', imageTag);
   }
   
   const yamlOut = doc.toString();
