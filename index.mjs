@@ -4,10 +4,12 @@ import yaml from 'yaml';
 import core from '@actions/core';
 
 function main() {
-  const envPath = core.getInput('envPath');
-  const outputFile = core.getInput('outputFile');
-  const imageTag = core.getInput('imageTag');
-  const subPath = core.getInput('subPath', { required: false });
+  // const envPath = core.getInput('envPath');
+  const envPath = '.env.default'
+  // const outputFile = core.getInput('outputFile');
+  const outputFile = './values.yaml';
+  const imageTag = 'v0.0.0.0.0.0.1' //core.getInput('imageTag');
+  const subPath = 'truefoundryFrontendApp' //core.getInput('subPath', { required: false });
 
   const { parsed } = dotenv.config({ path: envPath });
   const data = fs.readFileSync(outputFile, 'utf8');
@@ -24,7 +26,8 @@ function main() {
       currentObj = currentObj.get(key);
     }
     currentObj.get(subPathKeys[subPathKeys.length - 1]).set('env', parsed);
-    currentObj.get(subPathKeys[subPathKeys.length - 1]).set('image.tag', imageTag);
+    currentObj.get(subPathKeys[subPathKeys.length - 1]).get('image').set('tag', imageTag);
+    // console.log(currentObj.get(subPathKeys[subPathKeys.length - 1]).get('image').get('tag'));
   } else {
     doc.set('env', parsed);
     doc.set('image.tag', imageTag);
