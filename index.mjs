@@ -30,7 +30,10 @@ function main() {
     doc.set('image.tag', imageTag);
   }
   
-  const yamlOut = doc.toString();
+  const yamlOut = doc.toString({
+    lineWidth: 0,
+    minContentWidth: 0,
+  });
   fs.writeFileSync(outputFile, yamlOut);
 }
 
