@@ -27,7 +27,7 @@ function main() {
     currentObj.get(subPathKeys[subPathKeys.length - 1]).get('image').set('tag', imageTag);
   } else {
     doc.set('env', parsed);
-    doc.set('image.tag', imageTag);
+    doc.get('image').set('tag', imageTag);
   }
   
   const yamlOut = doc.toString({
