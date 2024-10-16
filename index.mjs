@@ -9,6 +9,7 @@ function main() {
   const imageTag = core.getInput('imageTag');
   const subPath = core.getInput('subPath', { required: false });
 
+  console.log('envPath', envPath);
   const { parsed } = dotenv.config({ path: envPath });
   console.log('parsed', parsed);
   const data = fs.readFileSync(outputFile, 'utf8');
