@@ -10,8 +10,11 @@ function main() {
   const subPath = core.getInput('subPath', { required: false });
 
   const { parsed } = dotenv.config({ path: envPath });
+  console.log('parsed', parsed);
   const data = fs.readFileSync(outputFile, 'utf8');
+  console.log('data', data);
   const doc = yaml.parseDocument(data);
+  console.log('doc', doc);
   
   if (subPath) {
     let currentObj = doc;
