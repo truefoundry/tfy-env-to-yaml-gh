@@ -23,10 +23,14 @@ function main() {
       }
       currentObj = currentObj.get(key);
     }
-    currentObj.get(subPathKeys[subPathKeys.length - 1]).set('env', parsed);
+    if (parsed) {
+      currentObj.get(subPathKeys[subPathKeys.length - 1]).set('env', parsed);
+    }
     currentObj.get(subPathKeys[subPathKeys.length - 1]).get('image').set('tag', imageTag);
   } else {
-    doc.set('env', parsed);
+    if (parsed) {
+      doc.set('env', parsed);
+    }
     doc.get('image').set('tag', imageTag);
   }
   
