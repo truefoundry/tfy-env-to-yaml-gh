@@ -16,6 +16,7 @@ function main() {
   console.log('parsed:', parsed);
   const data = fs.readFileSync(outputFile, 'utf8');
   console.log('data:', data);
+  console.log('dataString:', data.toString());
   const doc = yaml.parseDocument(data);
   console.log('doc:', doc.toString());
 
