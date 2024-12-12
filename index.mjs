@@ -5,20 +5,13 @@ import core from '@actions/core';
 
 function main() {
   const envPath = core.getInput('envPath');
-  console.log('envPath:', envPath);
   const outputFile = core.getInput('outputFile');
-  console.log('outputFile:', outputFile);
   const imageTag = core.getInput('imageTag');
-  console.log('imageTag:', imageTag);
   const subPath = core.getInput('subPath', { required: false });
 
   const { parsed } = dotenv.config({ path: envPath });
-  console.log('parsed:', parsed);
   const data = fs.readFileSync(outputFile, 'utf8');
-  console.log('data:', data);
-  console.log('dataString:', data.toString());
   const doc = yaml.parseDocument(data);
-  console.log('doc:', doc.toString());
 
   if (subPath) {
     let currentObj = doc;
