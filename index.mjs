@@ -12,7 +12,13 @@ function main() {
   const { parsed } = dotenv.config({ path: envPath });
   const data = fs.readFileSync(outputFile, 'utf8');
   const doc = yaml.parseDocument(data);
-  
+
+  console.log('parsed:', parsed);
+  console.log('imageTag:', imageTag);
+  console.log('subPath:', subPath);
+  console.log('doc:', doc);
+  console.log('outputFile:', outputFile);
+
   if (subPath) {
     let currentObj = doc;
     const subPathKeys = subPath.split('.');
@@ -31,6 +37,7 @@ function main() {
     if (parsed) {
       doc.set('env', parsed);
     }
+    console.log('doc:', doc);
     doc.get('image').set('tag', imageTag);
   }
   
