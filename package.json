@@ -21,6 +21,6 @@
         "@actions/core": "^1.9.1",
         "dotenv": "^16.0.1",
         "fs": "^0.0.1-security",
-        "yaml": "^2.4.3"
+        "yaml": "^2.8.3"
     }
 }
